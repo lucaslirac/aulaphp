@@ -9,12 +9,15 @@
 <body>
     <h1>Exibir Dados</h1>
     <?php
-     $Nome = $_GET ["Nome"];
-     $Altura = $_GET ["Altura"];
-     $Peso = $_GET ["Peso"];
+     $Nome = $_POST["Nome"];
+     $Altura = (float)$_POST["Altura"];
+     $Peso = (float)$_POST["Peso"];
+
+     $IMC = $Peso / ($Altura*$Altura);
     ?>
     <p>Nome : <?= $Nome?></p>
     <p>Altura : <?= $Altura?></p>
     <p>Peso <?= $Peso?></p>
+    <p>IMC <?= $IMC?></p>
 </body>
 </html>
